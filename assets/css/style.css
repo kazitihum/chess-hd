@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  --p: 233 72% 55%;
+  --pf: 233 72% 55%;
+  --pc: 0 0% 100%;
+  --s: 314 100% 47%;
+  --sf: 314 100% 37%;
+  --sc: 0 0% 100%;
+  --a: 174 60% 51%;
+  --af: 174 60% 41%;
+  --ac: 0 0% 100%;
+  --n: 215 28% 17%;
+  --nf: 221 39% 11%;
+  --nc: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 210 20% 98%;
+  --b3: 216 12% 84%;
+  --bc: 215 28% 17%;
+  --in: 207 90% 54%;
+  --su: 174 100% 29%;
+  --wa: 36 100% 50%;
+  --er: 14 100% 57%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-Light.ttf");
+  font-weight: light;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-SemiBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-ExtraBold.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("../font/ChakraPetch-SemiBold.ttf");
+  font-weight: bold;
+}
+
+h1 {
+  @apply text-4xl md:text-6xl font-bold leading-tight text-tertiary;
+}
+
+h2 {
+  @apply text-2xl md:text-4xl font-bold leading-10 text-tertiary;
+}
+
+h3 {
+  @apply text-xl md:text-2xl font-bold text-secondary;
+}
+
+p {
+  @apply text-secondary;
+}
+
+.min-1_3 {
+  min-width: 33.333333%;
+}
+
+.dark-gradient {
+  background: linear-gradient(
+    269.61deg,
+    rgba(104, 137, 253, 0.4) 19.64%,
+    rgba(104, 199, 253, 0) 97.08%
+  );
+  background-color: #190b27;
+}
+
+.primary-gradient {
+  background: linear-gradient(242.41deg, #fdb233 11.85%, #ea1d58 120.02%);
+}
+
+.bg-dark {
+  background-color: #190b27;
+}
+
+.bg-offwhite {
+  background-color: #f1f3f4;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@tailwind utilities;
