@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="second-section bg-offwhite py-16 overflow-hidden">
+    <div class="second-section bg-offwhite pt-10 pb-14 overflow-hidden">
       <div class="container mx-auto flex flex-col lg:flex-row items-center gap-10">
         <div class="form dark-gradient rounded-xl flex-1 p-10">
           <div class="relative z-10 flex items-center flex-col gap-6">
@@ -23,11 +23,16 @@
             <input class="input w-full" type="password" placeholder="Password" />
             <input class="input w-full" type="text" placeholder="Username" />
             <label for="agree" class="text-white w-full">
-              <input type="checkbox" name="agree" id="agree" /> I accept the terms and privacy policies
+              <input
+                type="checkbox"
+                name="agree"
+                id="agree"
+                class="align-text-bottom checkbox checkbox-sm checkbox-accent rounded-none mr-3"
+              /> I accept the terms and privacy policies
             </label>
             <input
               type="submit"
-              class="btn text-xl primary-gradient w-full"
+              class="btn border-0 text-xl primary-gradient w-full shadow-lg"
               value="register and Play Now"
             />
           </div>
@@ -71,7 +76,7 @@
         <h2 class="text-4xl text-center mb-10">Online Play, Chess Tournaments & More</h2>
         <div class="flex flex-col lg:flex-row gap-5">
           <div
-            class="flex-1 justify-between content bg-white flex items-center flex-col p-5 rounded-lg shadow-lg"
+            class="flex-1 justify-between content bg-white flex items-center flex-col p-5 rounded-lg shadow-lg transition transform hover:-translate-y-2 duration-300"
           >
             <img src="~/assets/icon/hand.svg" class="mb-3" alt />
             <h3 class="text-xl text-tertiary mb-3">Online Pay</h3>
@@ -81,13 +86,13 @@
             <div class="divider mb-0"></div>
           </div>
           <div
-            class="flex-1 justify-between content-2 text-center flex items-center flex-col p-5 rounded-lg shadow-lg"
+            class="flex-1 justify-between content-2 text-center flex items-center flex-col p-5 rounded-lg shadow-lg transition transform hover:-translate-y-2 duration-300"
           >
             <img style="max-height: 170px;" src="~/assets/icon/chess-badge.svg" alt />
             <h3 class="text-xl text-center text-white">Tournaments coming soon</h3>
           </div>
           <div
-            class="flex-1 justify-between content bg-white flex items-center flex-col p-5 rounded-lg shadow-lg"
+            class="flex-1 justify-between content bg-white flex items-center flex-col p-5 rounded-lg shadow-lg transition transform hover:-translate-y-2 duration-300"
           >
             <img src="~/assets/icon/bitcoin-color.svg" class="mb-3" alt />
             <h3 class="text-xl text-tertiary mb-3">Earn Crypto</h3>
@@ -97,7 +102,7 @@
             <div class="divider mb-0"></div>
           </div>
           <div
-            class="flex-1 justify-between content-4 text-center flex items-start flex-col p-5 rounded-lg shadow-lg relative"
+            class="flex-1 justify-between content-4 text-center flex items-start flex-col p-5 rounded-lg shadow-lg relative transition transform hover:-translate-y-2 duration-300"
           >
             <h3 class="text-4xl leading-normal text-white ml-5 mt-3">
               Win
@@ -151,7 +156,7 @@
           <div class="content">
             <NuxtLink
               to="#"
-              class="btn border-0 font-chakra font-bold primary-gradient px-8 text-2xl rounded"
+              class="shadow-lg btn border-0 font-chakra font-bold primary-gradient px-8 text-2xl rounded"
             >SIGN UP & Play Now!</NuxtLink>
           </div>
         </div>
@@ -169,17 +174,15 @@ export default {};
 <style scoped>
 .cover {
   background: url("~/assets/img/cover-bg.png") no-repeat top -20px center/cover;
+  animation: slideShow 100s linear infinite 0s;
 }
 .cover-heading {
-  background: linear-gradient(
-    255.14deg,
-    #00dff5 8.37%,
-    rgba(0, 98, 245, 0.56) 94.18%
-  );
+  background: linear-gradient(-90deg, #00dff5 30%, rgba(0, 98, 245, 0.56) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+  -webkit-text-stroke: 8px transparent;
   color: white;
+  /* text-shadow: 0 0 10px #00dff5, 0 0 20px rgba(0, 98, 245, 0.56); */
 }
 
 .second-section {
@@ -208,7 +211,7 @@ export default {};
 
 .input {
   background: linear-gradient(
-    102.12deg,
+    -102.12deg,
     rgba(255, 255, 255, 0.6) 4.34%,
     rgba(255, 255, 255, 0) 135.14%
   );
@@ -288,5 +291,64 @@ export default {};
   background: url(~/assets/img/fifth-bg.svg) no-repeat bottom center/contain;
   top: 0;
   left: 0;
+}
+
+/* keyframes*/
+
+@keyframes slideShow {
+  0% {
+    background-size: 105%;
+    background-position: center;
+  }
+  50% {
+    background-size: 200%;
+    background-position: center;
+  }
+  100% {
+    background-size: 105%;
+    background-position: center;
+  }
+}
+@-o-keyframes slideShow {
+  0% {
+    background-size: 105%;
+    background-position: center;
+  }
+  50% {
+    background-size: 200%;
+    background-position: center;
+  }
+  100% {
+    background-size: 105%;
+    background-position: center;
+  }
+}
+@-moz-keyframes slideShow {
+  0% {
+    background-size: 105%;
+    background-position: center;
+  }
+  50% {
+    background-size: 200%;
+    background-position: center;
+  }
+  100% {
+    background-size: 105%;
+    background-position: center;
+  }
+}
+@-webkit-keyframes slideShow {
+  0% {
+    background-size: 105%;
+    background-position: center;
+  }
+  50% {
+    background-size: 200%;
+    background-position: center;
+  }
+  100% {
+    background-size: 105%;
+    background-position: center;
+  }
 }
 </style>

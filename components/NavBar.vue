@@ -20,7 +20,7 @@
           <div class="flex-none">
             <NuxtLink
               to="#"
-              class="btn font-chakra border-0 font-bold primary-gradient w-44 rounded"
+              class="btn font-chakra border-0 shadow-lg font-bold primary-gradient w-44 rounded"
             >Play Now</NuxtLink>
           </div>
         </div>
